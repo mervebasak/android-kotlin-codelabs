@@ -12,13 +12,13 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     lateinit var diceImage: ImageView
-    lateinit var diceImage2: ImageView
+    lateinit var diceImage3: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         diceImage = findViewById(R.id.dice_image)
-        diceImage2 = findViewById(R.id.dice_image2)
+        diceImage3 = findViewById(R.id.dice_image3)
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         diceImage.setImageResource(getRandomDiceImage())
-        diceImage2.setImageResource(getRandomDiceImage())
+        diceImage3.setImageResource(getRandomDiceImage())
     }
 
     private fun getRandomDiceImage() : Int {
